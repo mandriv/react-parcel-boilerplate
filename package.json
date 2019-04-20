@@ -1,0 +1,23 @@
+{
+  "name": "react-parcel-boilerplate",
+  "version": "1.0.0",
+  "repository": "git@github.com:mandriv/react-parcel-boilerplate.git",
+  "license": "MIT",
+  "author": "mandriv <wojciech.cichoradzki@gmail.com>",
+  "scripts": {
+    "start": "parcel src/index.html --open --no-autoinstall",
+    "lint": "yarn eslint src --ext .jsx,.js"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.0",
+    "parcel-bundler": "^1.12.3"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
