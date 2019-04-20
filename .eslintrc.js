@@ -20,6 +20,7 @@ module.exports = {
     }
   },
   "rules": {
-    "import/no-absolute-path": 0,
+    "import/no-absolute-path": "off",
+    "no-console": ["error", { allow: ["warn", "error"] }]
   }
 };
