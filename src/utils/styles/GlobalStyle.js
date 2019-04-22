@@ -1,3 +1,4 @@
+// @flow
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'polished';
 

@@ -1,16 +1,32 @@
-import { Component } from 'react';
+// @flow
+import * as React from 'react';
 
-export default class RouterErrorBoundary extends Component {
+import DefaultError from './Error';
+
+type Props = {|
+  children: React.Node,
+  renderErrorPage: (error: Error | boolean) => React.Node
+|};
+
+type State = {|
+  error: boolean | Error
+|};
+
+export default class RouterErrorBoundary extends React.Component<Props, State> {
   state = {
     error: false,
   }
 
-  static getDerivedStateFromError(error) {
+  static defaultProps = {
+    renderErrorPage: (): React.Element<any> => <DefaultError />,
+  }
+
+  static getDerivedStateFromError(error: Error): State {
     // Update state so the next render will show the fallback UI.
     return { error };
   }
 
-  componentDidCatch(error, info) {
+  componentDidCatch(error: Error, info: Object) {
     console.warn(error);
     console.warn(info);
   }

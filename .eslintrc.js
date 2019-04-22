@@ -3,14 +3,19 @@ module.exports = {
     "browser": true,
     "es6": true
   },
-  "extends": "airbnb",
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
   "parser": "babel-eslint",
+  "extends": [
+    "airbnb",
+    "plugin:flowtype/recommended",
+    "plugin:flowtype-errors/recommended"
+  ],
   "plugins": [
-    "react"
+    "react",
+    "flowtype"
   ],
   "settings": {
     "import/resolver": {
@@ -21,6 +26,8 @@ module.exports = {
   },
   "rules": {
     "import/no-absolute-path": "off",
-    "no-console": ["error", { allow: ["warn", "error"] }]
+    "no-console": ["error", { allow: ["warn", "error"] }],
+    "react/require-default-props": ["error", { forbidDefaultForRequired: false }],
+    "react/default-props-match-prop-types": ["error", { "allowRequiredDefaults": true }]
   }
 };
