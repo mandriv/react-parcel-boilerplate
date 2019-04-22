@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import Home from './Home';
 
-export default Home;
+export default memo(Home);

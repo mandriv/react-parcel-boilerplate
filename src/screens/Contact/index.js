@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import Contact from './Contact';
 
-export default Contact;
+export default memo(Contact);

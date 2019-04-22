@@ -2,5 +2,7 @@
 yarn
 parcel
 eslint
-react router - code splitting error boundaries
+flow
+react router
+code splitting
 styled-components polished react-grid-system
